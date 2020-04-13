@@ -1,0 +1,9 @@
+server:
+  port: 8052
+spring:
+  application:
+    name: nacos-consumer-feign
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
