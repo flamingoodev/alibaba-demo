@@ -1,0 +1,15 @@
+server:
+  port: 8054
+spring:
+  application:
+    name: gateaway-server
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    gateway:
+      routes:
+        - id: nacos-provider
+          uri: lb://nacos-provider
+          predicates:
+            - Path=/demo/**
